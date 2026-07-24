@@ -104,7 +104,7 @@ with st.sidebar:
     top_n = st.slider("How many routes to show", 1, 25, 5)
 
 query_text = st.text_input(
-    # "What are you looking for?",
+    "",
     placeholder="e.g. vertical crimps technical no crack routes in Spain",
 )
 go = st.button("Search", type="primary")
