@@ -63,7 +63,7 @@ DISCIPLINES = ["Sport", "Trad", "Top rope", "Boulder", "Aid", "Mixed", "Ice", "A
 st.title("🧗 Climbing Route Finder")
 st.markdown(
     'Describe your ideal climbing route and get recommendations based on [analyzing](https://arianedekker.github.io/blog)'
-    ' +116k+ Mountain Project climbing routes.'
+    ' 116k+ Mountain Project climbing routes.'
 )
 
 # Loud warning if the real dataset is missing, so the app never quietly
