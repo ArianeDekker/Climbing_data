@@ -1,0 +1,66 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>Climbing Route Finder — preview</title>
+<style>
+:root{--ink:#1b2a3a;--green:#2f6f4f;--line:#e6e3dc;--muted:#6b7280;}
+*{box-sizing:border-box}body{margin:0;background:#faf9f6;color:var(--ink);font-family:-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 20px 60px}
+h1{font-family:Georgia,serif;font-size:2rem;margin:0 0 4px}h2{font-family:Georgia,serif;font-size:1.15rem;border-bottom:1px solid var(--line);padding-bottom:6px}
+.sub{color:var(--muted);margin:0 0 20px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:end;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.field{display:flex;flex-direction:column;font-size:.8rem;color:var(--muted)}
+.field select,.field input{margin-top:4px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:.95rem;background:#fff}
+.grow{flex:1;min-width:240px}.grow input{width:100%}
+.btn{background:var(--green);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-weight:600;cursor:pointer}
+.pill{display:inline-block;background:#eef2f7;border-radius:999px;padding:3px 11px;margin:2px 4px 2px 0;font-size:.8rem}
+.note{background:#eef6ff;border:1px solid #cfe2ff;border-radius:8px;padding:10px 12px;font-size:.85rem;margin:10px 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px 14px 46px;margin-bottom:12px}
+.rank{position:absolute;left:14px;top:14px;font-family:Georgia,serif;font-weight:700;color:#b9c2cc}
+.score{font-weight:700;color:var(--green)}.muted{color:var(--muted);font-size:.86rem}
+a{color:#2563eb;text-decoration:none;font-size:.85rem}
+.banner{background:#fff8e6;border:1px solid #f2e2a8;border-radius:8px;padding:8px 12px;font-size:.8rem;color:#7a5b00;margin-bottom:16px}
+</style></head><body><div class=wrap>
+<div class=banner>Static preview of the live Streamlit interface, populated with the built-in <b>[SAMPLE]</b> dataset. The deployed app is interactive.</div>
+<h1>🧗 Climbing Route Finder</h1>
+<p class=sub>Describe what you want to climb — recommendations come from the existing Mountain Project analysis.</p>
+<div class=bar>
+  <label class=field>Discipline<select><option>Sport</option><option>Trad</option><option>Top rope</option><option>Boulder</option></select></label>
+  <label class=field>Min grade<select><option>5.9</option></select></label>
+  <label class=field>Max grade<select><option>5.12a</option></select></label>
+  <label class="field grow">What are you looking for?<input value="pumpy pocketed sport climbing in Spain"></label>
+  <button class=btn>Search</button>
+</div>
+<h2>How your request was read</h2>
+<div><span class='pill'>Discipline: Sport</span><span class='pill'>Styles: pockets, pumpy</span><span class='pill'>Geography: spain</span><span class='pill'>Grades: (from selector)</span></div>
+<div class=note>Terms with no matching field in the source data are listed here and ignored (transparency requirement).</div>
+<p class=muted>4 candidate routes after filtering.</p>
+<div class=cols>
+  <div><h2>Top areas</h2><div class='card'><div class='rank'>1</div><div><b>Margalef</b>
+      <div class='muted'>Spain › Catalonia › Margalef</div>
+      <div><span class='score'>score 1.0</span> · 1 matching / 1 candidates · mean 1.0</div>
+      <div class='muted'>1 of 1 candidate routes match all of: pockets, pumpy.</div>
+      <div class='muted'>Top route: [SAMPLE] Pocket Rocket (5.11c)</div></div></div><div class='card'><div class='rank'>2</div><div><b>Siurana</b>
+      <div class='muted'>Spain › Catalonia › Siurana</div>
+      <div><span class='score'>score 0.5</span> · 1 matching / 2 candidates · mean 0.5</div>
+      <div class='muted'>1 of 2 candidate routes match all of: pockets, pumpy.</div>
+      <div class='muted'>Top route: [SAMPLE] Pumpfest (5.11d)</div></div></div></div>
+  <div><h2>Top routes</h2><div class='card'><div class='rank'>1</div><div><b>[SAMPLE] Pocket Rocket</b> <span class='muted'>5.11c · Sport</span>
+      <div class='muted'>Spain > Catalonia > Margalef</div>
+      <div><span class='score'>match 0.8913</span> · 2.6★ (84 votes)</div>
+      <div class='muted'>Matches pockets, pumpy; community rating 2.6★.</div>
+      <a href='https://www.mountainproject.com/route/100001/sample' target='_blank'>Mountain Project ↗</a></div></div><div class='card'><div class='rank'>2</div><div><b>[SAMPLE] Pumpfest</b> <span class='muted'>5.11d · Sport</span>
+      <div class='muted'>Spain > Catalonia > Siurana</div>
+      <div><span class='score'>match 0.7385</span> · 3.6★ (14 votes)</div>
+      <div class='muted'>Matches pockets, pumpy; community rating 3.6★.</div>
+      <a href='https://www.mountainproject.com/route/100009/sample' target='_blank'>Mountain Project ↗</a></div></div><div class='card'><div class='rank'>3</div><div><b>[SAMPLE] Slab Dancer</b> <span class='muted'>5.10a · Sport</span>
+      <div class='muted'>Spain > Catalonia > Siurana</div>
+      <div><span class='score'>match 0.0</span> · 3.5★ (155 votes)</div>
+      <div class='muted'>Matched on discipline/grade/location; no specific style requested.</div>
+      <a href='https://www.mountainproject.com/route/100000/sample' target='_blank'>Mountain Project ↗</a></div></div><div class='card'><div class='rank'>4</div><div><b>[SAMPLE] Crimp City</b> <span class='muted'>5.11a · Sport</span>
+      <div class='muted'>Spain > Catalonia > Montsant</div>
+      <div><span class='score'>match 0.0</span> · 3.4★ (291 votes)</div>
+      <div class='muted'>Matched on discipline/grade/location; no specific style requested.</div>
+      <a href='https://www.mountainproject.com/route/100004/sample' target='_blank'>Mountain Project ↗</a></div></div></div>
+</div>
+</div></body></html>

@@ -1,0 +1,11 @@
+# Runtime (web app + recommender)
+streamlit>=1.36
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14.0
+
+# Dev / tests only
+pytest>=7.4
+# torch is required ONLY to import the original Route_recommender.py in the
+# regression tests. The app itself does not import torch.
+# torch>=2.0
