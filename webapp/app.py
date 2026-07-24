@@ -62,7 +62,7 @@ DISCIPLINES = ["Sport", "Trad", "Top rope", "Boulder", "Aid", "Mixed", "Ice", "A
 
 st.title("🧗 Climbing Route Finder")
 st.markdown(
-    'Describe what you want to climb and get recommendations based on '
+    'Describe your ideal climbing route and get recommendations based on '
     '[Mountain Project analysis](https://arianedekker.github.io/blog).'
 )
 
@@ -82,7 +82,7 @@ if _probe_df.attrs.get("source") == "synthetic":
 
 with st.sidebar:
     st.header("Filters")
-    discipline = st.selectbox("Discipline", DISCIPLINES, index=0)
+    discipline = st.selectbox("Style", DISCIPLINES, index=0)
     if discipline == "Boulder":
         st.info("The Mountain Project routes dataset is roped-only — it has no standalone boulders, so this discipline returns no results.")
     labels = grade_labels_for_discipline(discipline)
