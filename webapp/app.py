@@ -105,7 +105,7 @@ with st.sidebar:
 
 query_text = st.text_input(
     "What are you looking for?",
-    placeholder="e.g. vertical crimps technical no crack routes in Spain ",
+    placeholder="e.g. vertical crimps technical no crack routes in Spain",
 )
 go = st.button("Search", type="primary")
 
